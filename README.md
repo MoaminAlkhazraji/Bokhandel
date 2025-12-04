@@ -22,7 +22,7 @@ En kund kan göra flera beställningar:
 KundID är primärnyckel i Kunder och används som främmande nyckel i Beställningar för att koppla en order till en specifik kund.
 
 En beställning kan innehålla flera orderrader:
-Ordernummer är primärnyckel i Beställningar och används som främmande nyckel i Orderrader för att gruppera alla artiklar under en och samma order.
+Ordernummer är primärnyckel i Beställningar och används som främmande nyckel i Orderrader för att gruppera alla artiklar under en och samma order. 
 
 
 En bok kan finnas på flera orderrader (i olika beställningar):
