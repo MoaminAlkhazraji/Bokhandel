@@ -5,12 +5,12 @@ USE Litenbokhandel;
 -- Tabell för böcker
 CREATE TABLE Bocker (
 	ISBN VARCHAR(100) PRIMARY KEY, -- ISBN används som primärnyckel
-    Titel VARBINARY(255) NOT NULL,
+    Titel VARCHAR(255) NOT NULL,
     Forfattare VARCHAR(255) NOT NULL,
     Pris DECIMAL(10,2) NOT NULL CHECK (Pris >= 0),
     Lagerstatus INT NOT NULL CHECK (Lagerstatus >= 0)
 );
-
+ 
 -- Tabell för kunder
 CREATE TABLE Kunder (
 	KundID INT AUTO_INCREMENT PRIMARY KEY,
@@ -21,7 +21,7 @@ CREATE TABLE Kunder (
 );
 
 -- Tabel för beställningar
-CREATE TABLE Bestallnigar (
+CREATE TABLE Bestallningar (
 	Ordernummer INT AUTO_INCREMENT PRIMARY KEY,
     KundID INT NOT NULL, -- Främmande nyckel till kunder
     Datum DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
